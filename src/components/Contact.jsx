@@ -38,8 +38,8 @@ const Contact = () => {
     setLoading(true);
     emailjs
       .send(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Tahsin",
@@ -47,7 +47,7 @@ const Contact = () => {
           to_email: "tasoavci2002@gmail.com",
           message: form.message,
         },
-        process.env.API_KEY
+        process.env.REACT_APP_API_KEY
       )
       .then(
         () => {
